@@ -7,49 +7,61 @@
     <title>
       Анна Ковыляева — домашнее задание для курса по цифровой доступности
     </title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+    </style>
   </head>
 
   <body>
-    <a href="#main">Skip to main</a>
+    <a href="#main" class="skipLink">Skip to main</a>
 
     <header>
-      <img src="images/logo.png" alt="" />
+      <div class="group">
+        <img src="images/logo.png" alt="" />
 
-      <input type="search" />
-      <button>Искать</button>
+        <div>
+          <input type="search" />
+          <button>Искать</button>
 
-      <label>
-        RU
-        <input type="radio" name="language" checked />
-      </label>
+          <label>
+            RU
+            <input type="radio" name="language" checked />
+          </label>
 
-      <label>
-        EN
-        <input type="radio" name="language" />
-      </label>
+          <label>
+            EN
+            <input type="radio" name="language" />
+          </label>
 
-      <button>Профиль</button>
+          <button><img src="icons/user.svg" alt="" /></button>
+        </div>
+      </div>
 
       <nav>
         <ul>
-          <li><a href="#">Музей</a></li>
-          <li><a href="#">Посетителям</a></li>
-          <li><a href="#">Выставки и события</a></li>
+          <li><a class="textLink" href="#">Музей</a></li>
+          <li><a class="textLink" href="#">Посетителям</a></li>
+          <li><a class="textLink" href="#">Выставки и события</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main">
       <div>
-        <img src="images/posters/durer-matisse.png" alt="" />
-        <button type="button">Билеты онлайн</button>
-      </div>
+        <div>
+          <img src="images/posters/durer-matisse.png" alt="" />
+          <button type="button">Билеты онлайн</button>
+        </div>
 
-      <ul>
-        <li><button type="button">Купить билет</button></li>
-        <li><button type="button">Стать другом</button></li>
-        <li><button type="button">Онлайн-магазин</button></li>
-      </ul>
+        <ul>
+          <li><button type="button">Купить билет</button></li>
+          <li><button type="button">Стать другом</button></li>
+          <li><button type="button">Онлайн-магазин</button></li>
+        </ul>
+      </div>
 
       <section><h2>Выставки и события</h2></section>
 
@@ -58,8 +70,9 @@
       <section>
         <h2>Онлайн-трансляции</h2>
         <iframe
-          width="420"
-          height="315"
+          class="video"
+          width="100%"
+          height="611px"
           src="https://www.youtube.com/embed/5qRR-5H1XgU"
         >
         </iframe>
@@ -72,59 +85,71 @@
           экскурсиям и лекциям для взрослых и детей, оплатив участие на сайте.
           Встречи будут проходить в прямом эфире на платформе Zoom; предусмотрен
           формат живого общения с возможностью задавать вопросы экскурсоводу
-          (лектору). <a href="#">Подробнее.</a>
+          (лектору). <a class="textLink" href="#">Подробнее.</a>
         </p>
         <p>
-          Мы будем благодарны за любое <a href="#">пожертвование</a>. Все
-          поступившие средства будут направлены на организацию онлайн-проектов
-          для наших посетителей.
+          Мы будем благодарны за любое
+          <a class="textLink" href="#">пожертвование</a>. Все поступившие
+          средства будут направлены на организацию онлайн-проектов для наших
+          посетителей.
         </p>
       </section>
     </main>
 
     <footer>
-      <ul>
-        <li><a>Посетителям с ограниченными возможностями</a></li>
-        <li><a>Билеты и льготы</a></li>
-        <li><a>Противодействие коррупции</a></li>
-      </ul>
+      <div class="contentWrapper">
+        <div>
+          <ul class="linksList">
+            <li>
+              <a class="textLink">Посетителям с ограниченными возможностями</a>
+            </li>
+            <li><a class="textLink">Билеты и льготы</a></li>
+            <li><a class="textLink">Противодействие коррупции</a></li>
+          </ul>
 
-      <section>
-        <h2>Соц. сети</h2>
+          <section>
+            <h2>Соц. сети</h2>
 
-        <ul>
-          <li>
-            <a href="#"
-              ><img src="images/social-media-icons/email.svg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="images/social-media-icons/telegram.svg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="images/social-media-icons/facebook.svg" alt=""
-            /></a>
-          </li>
-        </ul>
-      </section>
+            <ul class="socialMediaList">
+              <li>
+                <a href="#"
+                  ><img src="icons/social-media/email.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="icons/social-media/telegram.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="icons/social-media/facebook.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </section>
+        </div>
 
-      <section>
-        <h2>Подписка на новости</h2>
+        <section>
+          <h2>Подписка на новости</h2>
 
-        <form action="">
-          <input type="email" />
+          <form action="">
+            <div class="inputs">
+              <label>
+                Email
+                <input type="email" />
+              </label>
 
-          <label>
-            <input type="checkbox" />
-            Согласен на обработку персональных данных
-          </label>
+              <label>
+                <input type="checkbox" />
+                Согласен на обработку персональных данных
+              </label>
+            </div>
 
-          <button type="submit">Подписаться</button>
-        </form>
-      </section>
+            <button type="submit">Подписаться</button>
+          </form>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
