@@ -10,14 +10,121 @@
   </head>
 
   <body>
-    <header>
-      Лого Поиск Языки Профиль
+    <a href="#main">Skip to main</a>
 
-      <nav>Навигация</nav>
+    <header>
+      <img src="images/logo.png" alt="" />
+
+      <input type="search" />
+      <button>Искать</button>
+
+      <label>
+        RU
+        <input type="radio" name="language" checked />
+      </label>
+
+      <label>
+        EN
+        <input type="radio" name="language" />
+      </label>
+
+      <button>Профиль</button>
+
+      <nav>
+        <ul>
+          <li><a href="#">Музей</a></li>
+          <li><a href="#">Посетителям</a></li>
+          <li><a href="#">Выставки и события</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>Основная информация</main>
+    <main id="main">
+      <div>
+        <img src="images/posters/durer-matisse.png" alt="" />
+        <button type="button">Билеты онлайн</button>
+      </div>
 
-    <footer>Подвал</footer>
+      <ul>
+        <li><button type="button">Купить билет</button></li>
+        <li><button type="button">Стать другом</button></li>
+        <li><button type="button">Онлайн-магазин</button></li>
+      </ul>
+
+      <section><h2>Выставки и события</h2></section>
+
+      <section><h2>Музей</h2></section>
+
+      <section>
+        <h2>Онлайн-трансляции</h2>
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/5qRR-5H1XgU"
+        >
+        </iframe>
+      </section>
+
+      <section>
+        <h2>Экскурсии и лекции в прямом эфире</h2>
+        <p>
+          С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям —
+          экскурсиям и лекциям для взрослых и детей, оплатив участие на сайте.
+          Встречи будут проходить в прямом эфире на платформе Zoom; предусмотрен
+          формат живого общения с возможностью задавать вопросы экскурсоводу
+          (лектору). <a href="#">Подробнее.</a>
+        </p>
+        <p>
+          Мы будем благодарны за любое <a href="#">пожертвование</a>. Все
+          поступившие средства будут направлены на организацию онлайн-проектов
+          для наших посетителей.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <ul>
+        <li><a>Посетителям с ограниченными возможностями</a></li>
+        <li><a>Билеты и льготы</a></li>
+        <li><a>Противодействие коррупции</a></li>
+      </ul>
+
+      <section>
+        <h2>Соц. сети</h2>
+
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="images/social-media-icons/email.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/social-media-icons/telegram.svg" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/social-media-icons/facebook.svg" alt=""
+            /></a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Подписка на новости</h2>
+
+        <form action="">
+          <input type="email" />
+
+          <label>
+            <input type="checkbox" />
+            Согласен на обработку персональных данных
+          </label>
+
+          <button type="submit">Подписаться</button>
+        </form>
+      </section>
+    </footer>
   </body>
 </html>
