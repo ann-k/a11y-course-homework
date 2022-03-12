@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      Анна Ковыляева — домашнее задание для курса по цифровой доступности
-    </title>
+    <title>Анна Ковыляева — домашка</title>
 
     <link rel="stylesheet" href="styles.css" />
 
@@ -16,60 +14,202 @@
   </head>
 
   <body>
-    <a href="#main" class="skipLink">Skip to main</a>
-
     <header>
-      <div class="group">
-        <img src="images/logo.png" alt="" />
+      <a href="#main" class="skipLink linkAsButton">К основному контенту</a>
 
-        <div>
-          <input type="search" />
-          <button>Искать</button>
+      <div class="actionsContainer">
+        <img
+          class="logo"
+          src="images/logo.png"
+          alt="Логотип Государственного музея изобразительных искусств имени А.С.Пушкина."
+        />
 
-          <label>
-            RU
-            <input type="radio" name="language" checked />
-          </label>
+        <div class="actions">
+          <!-- <input type="search" placeholder="Поиск" />
+          <button type="submit" aria-label="Искать">
+            <img src="icons/search.svg" />
+          </button> -->
 
-          <label>
-            EN
-            <input type="radio" name="language" />
-          </label>
+          <nav class="languages" aria-label="Выбрать язык">
+            <span aria-hidden="true">RU</span>
+            <span class="visuallyHidden">Русский</span>
 
-          <button><img src="icons/user.svg" alt="" /></button>
+            <a href="#" hreflang="en" aria-label="English" title="English"
+              >EN</a
+            >
+          </nav>
+
+          <button type="button" aria-label="Вход" title="Вход">
+            <img src="icons/user.svg" alt="" aria-hidden="true" />
+          </button>
         </div>
       </div>
 
-      <nav>
+      <nav class="menu" aria-label="Меню">
         <ul>
-          <li><a class="textLink" href="#">Музей</a></li>
-          <li><a class="textLink" href="#">Посетителям</a></li>
-          <li><a class="textLink" href="#">Выставки и события</a></li>
+          <li><a href="#">Музей</a></li>
+          <li><a href="#">Посетителям</a></li>
+          <li><a href="#">Выставки и события</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main">
-      <div>
+      <h1 class="visuallyHidden">
+        Государственный музей изобразительных искусств имени А.С.Пушкина
+      </h1>
+
+      <!-- <div>
         <div>
-          <img src="images/posters/durer-matisse.png" alt="" />
-          <button type="button">Билеты онлайн</button>
+          <img
+            src="images/posters/durer-matisse.png"
+            alt="Плакат выставки «От Дюрера до Матисса». Избранные рисунки из собрания ГМИИ имени А.С.Пушкина. 10 июля — 1 ноября, главное здание."
+          />
+          <button type="button" class="buttonPrimary">Билеты онлайн</button>
         </div>
 
-        <ul>
-          <li><button type="button">Купить билет</button></li>
-          <li><button type="button">Стать другом</button></li>
-          <li><button type="button">Онлайн-магазин</button></li>
+        <ul class="actionsList">
+          <li>
+            <button type="button" class="buttonPrimary">Купить билет</button>
+          </li>
+          <li>
+            <button type="button" class="buttonPrimary">Стать другом</button>
+          </li>
+          <li>
+            <button type="button" class="buttonPrimary">Онлайн-магазин</button>
+          </li>
         </ul>
-      </div>
+      </div> -->
 
-      <section><h2>Выставки и события</h2></section>
+      <section aria-labelledby="eventsHeading">
+        <h2 id="eventsHeading">Выставки и события</h2>
+      </section>
 
-      <section><h2>Музей</h2></section>
+      <section aria-labelledby="museumHeading">
+        <h2 id="museumHeading">Музей</h2>
 
-      <section>
-        <h2>Онлайн-трансляции</h2>
+        <div role="tablist">
+          <button
+            type="button"
+            class="tab active"
+            id="buildingsTab"
+            role="tab"
+            aria-controls="buildingsTabPanel"
+            aria-selected="true"
+            tabindex="0"
+          >
+            Здания
+          </button>
+          <button
+            type="button"
+            class="tab"
+            id="historyTab"
+            role="tab"
+            aria-controls="historyTabPanel"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            История
+          </button>
+        </div>
+
+        <div
+          id="buildingsTabPanel"
+          class="tabPanel active"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="buildingsTab"
+        >
+          <div>
+            <img src="images/buildings/1.png" alt="" />
+            <h3>МЕМОРИАЛЬНАЯ КВАРТИРА С.Т. РИХТЕРА</h3>
+            <p>ул. Большая Бронная, 2/6, 16 этаж, кв. 58</p>
+            <a
+              href="#"
+              aria-label="Подробнее о мемориальной квартире с.т. рихтера"
+              >Подробнее</a
+            >
+          </div>
+          <div>
+            <img src="images/buildings/2.png" alt="" />
+            <h3>ЦЭВ «МУСЕЙОН»</h3>
+            <p>Колымажный пер., 6/2, 3 (вход с Малого Знаменского переулка)</p>
+            <a href="#" aria-label="Подробнее о ЦЭВ «Мусейон»">Подробнее</a>
+          </div>
+          <div>
+            <img src="images/buildings/3.png" alt="" />
+            <h3>УСАДЬБА ЛОПУХИНЫХ</h3>
+            <p>Малый Знаменский пер., 3/5с4</p>
+            <a href="#" aria-label="Подробнее об усадьбе Лопухиных"
+              >Подробнее</a
+            >
+          </div>
+          <div>
+            <img src="images/buildings/4.png" alt="" />
+            <h3>УЧЕБНЫЙ МУЗЕЙ</h3>
+            <p>ул. Чаянова, 15</p>
+            <a href="#" aria-label="Подробнее об учебном музее">Подробнее</a>
+          </div>
+          <div>
+            <img src="images/buildings/5.png" alt="" />
+            <h3>ОТДЕЛ ЛИЧНЫХ КОЛЛЕКЦИЙ</h3>
+            <p>ул. Волхонка, 10</p>
+            <a href="#" aria-label="Подробнее об отделе личных коллекций"
+              >Подробнее</a
+            >
+          </div>
+          <div>
+            <img src="images/buildings/6.png" alt="" />
+            <h3>ГАЛЕРЕЯ</h3>
+            <p>ул. Волхонка, 14</p>
+            <a href="#" aria-label="Подробнее о галерее">Подробнее</a>
+          </div>
+        </div>
+
+        <div
+          id="historyTabPanel"
+          class="tabPanel"
+          role="tabpanel"
+          tabindex="0"
+          aria-labelledby="historyTab"
+        >
+          <p>
+            Государственный музей изобразительных искусств имени А.С. Пушкина –
+            одно из крупнейших в России художественных собраний зарубежного
+            искусства с древнейших времен до наших дней.
+          </p>
+          <p>
+            В современной экспозиции представлены обширная учебная коллекция
+            тонированных гипсовых слепков с произведений Античности, Средних
+            веков и эпохи Возрождения, а также собрание подлинных произведений
+            живописи, скульптуры, графики и декоративно-прикладного искусства.
+          </p>
+          <p>
+            В залах первого этажа Главного здания представлены: произведения
+            искусства Древнего Египта, Античности, собрание европейской живописи
+            VIII–XVIII веков; два зала – Итальянский и Греческий дворики –
+            занимают слепки. На втором этаже Главного здания в залах размещены
+            слепки произведений искусства Древней Греции, Рима, Средних веков и
+            Возрождения.
+          </p>
+          <p>
+            В начале 2017 года музей определил новое направление своей
+            деятельности – Пушкинский XXI, – ориентированное на современное
+            российское и западное искусство во всех аспектах – выставочном,
+            образовательном и исследовательском. Таким образом, ГМИИ им. А.С.
+            Пушкина представляет собой открытую, интерактивную сцену,
+            демонстрирующую развитие мировой культуры с древности до наших дней,
+            живое, знакомое с детства пространство для получения знаний и
+            общения.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="liveStreamHeading">
+        <h2 id="liveStreamHeading">Онлайн-трансляции</h2>
+
         <iframe
+          title="Ай Вейвей: движение к общечеловеческому"
           class="video"
           width="100%"
           height="611px"
@@ -78,18 +218,26 @@
         </iframe>
       </section>
 
-      <section>
-        <h2>Экскурсии и лекции в прямом эфире</h2>
+      <section aria-labelledby="virtualEventsHeading">
+        <h2 id="virtualEventsHeading">Экскурсии и лекции в прямом эфире</h2>
+
         <p>
           С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям —
           экскурсиям и лекциям для взрослых и детей, оплатив участие на сайте.
           Встречи будут проходить в прямом эфире на платформе Zoom; предусмотрен
           формат живого общения с возможностью задавать вопросы экскурсоводу
-          (лектору). <a class="textLink" href="#">Подробнее.</a>
+          (лектору).
+          <a
+            class="linkAsText"
+            href="#"
+            aria-label="Подробнее о экскурсиях и лекциях в прямом эфире"
+            >Подробнее.</a
+          >
         </p>
+
         <p>
           Мы будем благодарны за любое
-          <a class="textLink" href="#">пожертвование</a>. Все поступившие
+          <a class="linkAsText" href="#">пожертвование</a>. Все поступившие
           средства будут направлены на организацию онлайн-проектов для наших
           посетителей.
         </p>
@@ -100,11 +248,9 @@
       <div class="contentWrapper">
         <div>
           <ul class="linksList">
-            <li>
-              <a class="textLink">Посетителям с ограниченными возможностями</a>
-            </li>
-            <li><a class="textLink">Билеты и льготы</a></li>
-            <li><a class="textLink">Противодействие коррупции</a></li>
+            <li><a href="#">Посетителям с ограниченными возможностями</a></li>
+            <li><a href="#">Билеты и льготы</a></li>
+            <li><a href="#">Противодействие коррупции</a></li>
           </ul>
 
           <section>
@@ -112,18 +258,27 @@
 
             <ul class="socialMediaList">
               <li>
-                <a href="#"
-                  ><img src="icons/social-media/email.svg" alt=""
+                <a href="#" aria-label="Электронная почта"
+                  ><img
+                    src="icons/social-media/email.svg"
+                    alt=""
+                    aria-hidden="true"
                 /></a>
               </li>
               <li>
-                <a href="#"
-                  ><img src="icons/social-media/telegram.svg" alt=""
+                <a href="#" aria-label="Telegram"
+                  ><img
+                    src="icons/social-media/telegram.svg"
+                    alt=""
+                    aria-hidden="true"
                 /></a>
               </li>
               <li>
-                <a href="#"
-                  ><img src="icons/social-media/facebook.svg" alt=""
+                <a href="#" aria-label="Facebook"
+                  ><img
+                    src="icons/social-media/facebook.svg"
+                    alt=""
+                    aria-hidden="true"
                 /></a>
               </li>
             </ul>
@@ -133,20 +288,20 @@
         <section>
           <h2>Подписка на новости</h2>
 
-          <form action="">
+          <form action="/">
             <div class="inputs">
               <label>
                 Email
-                <input type="email" />
+                <input type="email" required aria-required="true" />
               </label>
 
               <label>
-                <input type="checkbox" />
+                <input type="checkbox" required aria-required="true" />
                 Согласен на обработку персональных данных
               </label>
             </div>
 
-            <button type="submit">Подписаться</button>
+            <button type="submit" class="buttonPrimary">Подписаться</button>
           </form>
         </section>
       </div>
