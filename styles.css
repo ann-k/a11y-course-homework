@@ -136,6 +136,9 @@ main .actionsList {
 }
 
 .tab {
+  height: 58px;
+  padding: 16px 38px;
+
   font-size: 22px;
   background: none;
   border: none;
@@ -143,9 +146,6 @@ main .actionsList {
 }
 
 .tab.active {
-  height: 58px;
-  padding: 16px 38px;
-
   border-radius: 8px;
   background-color: #c7d2e9;
   text-decoration: none;
@@ -155,12 +155,8 @@ main .actionsList {
   cursor: pointer;
 }
 
-.tabPanel {
-  display: none;
-}
-
-.tabPanel.active {
-  display: block;
+.tabPanel.hidden {
+  display: none !important;
 }
 
 #buildingsTabPanel {
