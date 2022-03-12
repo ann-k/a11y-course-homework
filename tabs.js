@@ -34,7 +34,6 @@ function keydownEventListener(event) {
 
 function keyupEventListener(event) {
   var key = event.keyCode;
-  console.log(key);
 
   switch (key) {
     case keys.left:
