@@ -193,6 +193,7 @@ main h2 {
 .sliderControl {
   position: absolute;
   top: 40%;
+  z-index: 1;
 }
 
 .sliderControl.prev {
@@ -201,6 +202,16 @@ main h2 {
 
 .sliderControl.next {
   right: -70px;
+}
+
+@media (max-width: 1200px) {
+  .sliderControl.prev {
+    left: 0;
+  }
+
+  .sliderControl.next {
+    right: 0;
+  }
 }
 
 .slide {
