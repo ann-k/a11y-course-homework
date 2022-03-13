@@ -33,15 +33,20 @@
           </button> -->
 
           <nav class="languages" aria-label="Выбрать язык">
-            <span aria-hidden="true">RU</span>
+            <span class="language active" aria-hidden="true">RU</span>
             <span class="visuallyHidden">Русский</span>
 
-            <a href="#" hreflang="en" aria-label="English" title="English"
+            <a
+              href="#"
+              hreflang="en"
+              class="language"
+              aria-label="English"
+              title="English"
               >EN</a
             >
           </nav>
 
-          <button type="button" aria-label="Вход" title="Вход">
+          <button type="button" class="auth" aria-label="Вход" title="Вход">
             <img src="icons/user.svg" alt="" aria-hidden="true" />
           </button>
         </div>
@@ -83,9 +88,9 @@
         </ul>
       </div> -->
 
-      <section aria-labelledby="eventsHeading">
+      <!-- <section aria-labelledby="eventsHeading">
         <h2 id="eventsHeading">Выставки и события</h2>
-      </section>
+      </section> -->
 
       <section aria-labelledby="museumHeading">
         <h2 id="museumHeading">Музей</h2>
@@ -170,7 +175,7 @@
 
         <div
           id="historyTabPanel"
-          class="tabPanel hidden"
+          class="text tabPanel hidden"
           role="tabpanel"
           tabindex="0"
           aria-labelledby="historyTab"
@@ -220,29 +225,31 @@
         </iframe>
       </section>
 
-      <section aria-labelledby="virtualEventsHeading">
+      <section class="virtualEvents" aria-labelledby="virtualEventsHeading">
         <h2 id="virtualEventsHeading">Экскурсии и лекции в прямом эфире</h2>
 
-        <p>
-          С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям —
-          экскурсиям и лекциям для взрослых и детей, оплатив участие на сайте.
-          Встречи будут проходить в прямом эфире на платформе Zoom; предусмотрен
-          формат живого общения с возможностью задавать вопросы экскурсоводу
-          (лектору).
-          <a
-            class="linkAsText"
-            href="#"
-            aria-label="Подробнее о экскурсиях и лекциях в прямом эфире"
-            >Подробнее.</a
-          >
-        </p>
+        <div class="text">
+          <p>
+            С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям —
+            экскурсиям и лекциям для взрослых и детей, оплатив участие на сайте.
+            Встречи будут проходить в прямом эфире на платформе Zoom;
+            предусмотрен формат живого общения с возможностью задавать вопросы
+            экскурсоводу (лектору).
+            <a
+              class="linkAsText"
+              href="#"
+              aria-label="Подробнее о экскурсиях и лекциях в прямом эфире"
+              >Подробнее.</a
+            >
+          </p>
 
-        <p>
-          Мы будем благодарны за любое
-          <a class="linkAsText" href="#">пожертвование</a>. Все поступившие
-          средства будут направлены на организацию онлайн-проектов для наших
-          посетителей.
-        </p>
+          <p>
+            Мы будем благодарны за любое
+            <a class="linkAsText" href="#">пожертвование</a>. Все поступившие
+            средства будут направлены на организацию онлайн-проектов для наших
+            посетителей.
+          </p>
+        </div>
       </section>
     </main>
 
@@ -297,7 +304,7 @@
                 <input type="email" required aria-required="true" />
               </label>
 
-              <label>
+              <label class="checkboxLabel">
                 <input type="checkbox" required aria-required="true" />
                 Согласен на обработку персональных данных
               </label>

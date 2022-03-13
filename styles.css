@@ -10,6 +10,11 @@ img {
   max-width: 100%;
 }
 
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
 .visuallyHidden {
   position: absolute !important;
   height: 1px;
@@ -40,6 +45,13 @@ img {
   background-color: #5d16d5;
   border: none;
   border-radius: 8px;
+  font-size: 22px;
+}
+
+.text {
+  display: grid;
+  row-gap: 30px;
+
   font-size: 22px;
 }
 
@@ -92,7 +104,28 @@ header input[type="search"] {
 }
 
 .languages {
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 8px;
+}
+
+.language {
+  min-width: 64px;
+  height: 52px;
+
+  background-color: #c7d2e9;
+  color: black;
+  border-radius: 4px;
+  font-size: 22px;
+  line-height: 52px;
+  text-align: center;
+}
+
+.auth {
+  margin-inline-start: 40px;
+
+  background: none;
+  border: none;
 }
 
 nav.menu ul {
@@ -105,9 +138,17 @@ nav.menu ul {
 }
 
 nav.menu a {
+  display: flex;
+  align-items: center;
+  height: 44px;
+
   font-size: 18px;
   color: black;
   text-decoration: none;
+}
+
+nav.menu a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -151,8 +192,8 @@ main .actionsList {
   text-decoration: none;
 }
 
-.tab:hover {
-  cursor: pointer;
+.tabPanel {
+  margin-top: 48px;
 }
 
 .tabPanel.hidden {
@@ -165,6 +206,21 @@ main .actionsList {
   grid-template-rows: repeat(2, 1fr);
   column-gap: 48px;
   row-gap: 70px;
+}
+
+#buildingsTabPanel h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+
+  font-size: 26px;
+  font-weight: 400;
+}
+
+#buildingsTabPanel a {
+  display: block;
+  margin-top: 16px;
+
+  color: black;
 }
 
 footer {
@@ -187,17 +243,28 @@ footer .contentWrapper {
 
 footer .linksList {
   display: grid;
-  row-gap: 16px;
-
+  margin-bottom: 16px;
   padding: 0;
 
   list-style: none;
 }
 
 footer .linksList a {
+  display: block;
+  min-height: 44px;
+
+  line-height: 44px;
   font-size: 18px;
   color: black;
   text-decoration: none;
+}
+
+footer .linksList a:hover {
+  text-decoration: underline;
+}
+
+footer h2 {
+  margin-bottom: 12px;
 }
 
 footer .socialMediaList {
@@ -212,6 +279,7 @@ footer .socialMediaList {
 
 footer form {
   display: flex;
+  align-items: flex-start;
 }
 
 footer form .inputs {
@@ -220,12 +288,23 @@ footer form .inputs {
 }
 
 footer form input[type="email"] {
+  height: 44px;
   background: none;
   border: none;
   border-bottom: black solid 1px;
 }
 
+footer form .checkboxLabel {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+
+  height: 44px;
+}
+
 footer form input[type="checkbox"] {
+  margin-inline-end: 8px;
+
   width: 24px;
   height: 24px;
 }
