@@ -29,7 +29,7 @@ button:hover {
 }
 
 .linkAsButton {
-  background-color: #c7d2e9;
+  background-color: #7595cc;
   border: none;
   border-radius: 8px;
   color: black;
@@ -86,6 +86,7 @@ header {
 header .actionsContainer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   margin-bottom: 75px;
 }
@@ -99,7 +100,7 @@ header input[type="search"] {
   height: 48px;
 
   background-color: #f9f9fb;
-  border: #c7d2e9 solid 1px;
+  border: #7595cc solid 1px;
   border-radius: 26px;
 }
 
@@ -113,7 +114,7 @@ header input[type="search"] {
   min-width: 64px;
   height: 52px;
 
-  background-color: #c7d2e9;
+  background-color: #7595cc;
   color: black;
   border-radius: 4px;
   font-size: 22px;
@@ -188,7 +189,7 @@ main .actionsList {
 
 .tab.active {
   border-radius: 8px;
-  background-color: #c7d2e9;
+  background-color: #7595cc;
   text-decoration: none;
 }
 
@@ -221,6 +222,87 @@ main .actionsList {
   margin-top: 16px;
 
   color: black;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.43);
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  display: grid;
+  grid-template-rows: max-content max-content;
+  row-gap: 40px;
+
+  padding: 70px 150px 80px;
+  box-sizing: border-box;
+
+  width: 790px;
+  height: 580px;
+
+  background-color: white;
+  border-radius: 8px;
+}
+
+.modal h2 {
+  font-size: 50px;
+}
+
+.modal form {
+  display: grid;
+  row-gap: 40px;
+}
+
+.modal label {
+  display: grid;
+  font-size: 22px;
+}
+
+.modal input {
+  height: 65px;
+
+  background-color: #f9f9fb;
+  border: #7595cc solid 1px;
+  border-radius: 8px;
+  font-size: 30px;
+}
+
+.modal form button {
+  height: 65px;
+
+  font-size: 30px;
+  background: none;
+  background-color: #7595cc;
+  border: none;
+  border-radius: 8px;
+}
+
+.closeModal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 44px;
+  height: 44px;
+
+  background: none;
+  border: none;
+
+  font-size: 30px;
 }
 
 footer {

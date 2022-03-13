@@ -12,7 +12,9 @@
       @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
     </style>
 
+    <script type="text/javascript" src="shared.js" defer></script>
     <script type="text/javascript" src="tabs.js" defer></script>
+    <script type="text/javascript" src="modal.js" defer></script>
   </head>
 
   <body>
@@ -46,9 +48,43 @@
             >
           </nav>
 
-          <button type="button" class="auth" aria-label="Вход" title="Вход">
+          <button
+            type="button"
+            class="auth"
+            aria-label="Вход, откроется модальное окно"
+          >
             <img src="icons/user.svg" alt="" aria-hidden="true" />
           </button>
+
+          <div class="overlay hidden">
+            <div
+              class="modal"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modalHeading"
+              tabindex="-1"
+            >
+              <h2 id="modalHeading">Вход</h2>
+
+              <form action="" aria-labelledby="modalHeading">
+                <label>
+                  Логин
+                  <input class="firstFocusableElement" type="text" required />
+                </label>
+
+                <label>
+                  Пароль
+                  <input type="password" required />
+                </label>
+
+                <button type="submit">Вход</button>
+              </form>
+
+              <button type="button" class="closeModal" aria-label="Закрыть">
+                X
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -295,9 +331,9 @@
         </div>
 
         <section>
-          <h2>Подписка на новости</h2>
+          <h2 id="subscriptionHeading">Подписка на новости</h2>
 
-          <form action="/">
+          <form action="" aria-labelledby="subscriptionHeading">
             <div class="inputs">
               <label>
                 Email
