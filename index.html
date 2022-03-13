@@ -15,6 +15,7 @@
     <script type="text/javascript" src="shared.js" defer></script>
     <script type="text/javascript" src="tabs.js" defer></script>
     <script type="text/javascript" src="modal.js" defer></script>
+    <script type="text/javascript" src="slider.js" defer></script>
   </head>
 
   <body>
@@ -104,14 +105,59 @@
         Государственный музей изобразительных искусств имени А.С.Пушкина
       </h1>
 
-      <!-- <div>
-        <div>
-          <img
-            src="images/posters/durer-matisse.png"
-            alt="Плакат выставки «От Дюрера до Матисса». Избранные рисунки из собрания ГМИИ имени А.С.Пушкина. 10 июля — 1 ноября, главное здание."
-          />
-          <button type="button" class="buttonPrimary">Билеты онлайн</button>
-        </div>
+      <div>
+        <section
+          class="slider"
+          aria-roledescription="carousel"
+          aria-label="Плакаты выставок и событий"
+        >
+          <button aria-label="Предыдущий слайд" class="sliderControl prev">
+            <img src="icons/arrowBack.svg" alt="" />
+          </button>
+          <button aria-label="Следующий слайд" class="sliderControl next">
+            <img src="icons/arrowForward.svg" alt="" />
+          </button>
+
+          <div class="slides" aria-live="polite" aria-atomic="false">
+            <div
+              class="slide active"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="1 из 2"
+            >
+              <img
+                src="images/posters/durer-matisse.png"
+                alt="«От Дюрера до Матисса». Избранные рисунки из собрания ГМИИ имени А.С.Пушкина. 10 июля — 1 ноября, главное здание."
+              />
+              <button
+                type="button"
+                class="buttonPrimary"
+                aria-label="Билеты онлайн на «От Дюрера до Матисса»"
+              >
+                Билеты онлайн
+              </button>
+            </div>
+
+            <div
+              class="slide"
+              role="group"
+              aria-roledescription="slide"
+              aria-label="2 из 2"
+            >
+              <img
+                src="images/posters/tatoo.png"
+                alt="«Тату. Более 3000 лет истории тату»."
+              />
+              <button
+                type="button"
+                class="buttonPrimary"
+                aria-label="Билеты онлайн на «Тату»"
+              >
+                Билеты онлайн
+              </button>
+            </div>
+          </div>
+        </section>
 
         <ul class="actionsList">
           <li>
@@ -124,11 +170,7 @@
             <button type="button" class="buttonPrimary">Онлайн-магазин</button>
           </li>
         </ul>
-      </div> -->
-
-      <!-- <section aria-labelledby="eventsHeading">
-        <h2 id="eventsHeading">Выставки и события</h2>
-      </section> -->
+      </div>
 
       <section aria-labelledby="museumHeading">
         <h2 id="museumHeading">Музей</h2>

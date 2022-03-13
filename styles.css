@@ -10,6 +10,11 @@ img {
   max-width: 100%;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 a:hover,
 button:hover {
   cursor: pointer;
@@ -118,9 +123,6 @@ header .actions {
 
   width: 48px;
   height: 48px;
-
-  background: none;
-  border: none;
 }
 
 .languages {
@@ -143,9 +145,6 @@ header .actions {
 
 .auth {
   margin-inline-start: 40px;
-
-  background: none;
-  border: none;
 }
 
 nav.menu ul {
@@ -187,12 +186,46 @@ main h2 {
   font-weight: 400;
 }
 
+.slider {
+  position: relative;
+}
+
+.sliderControl {
+  position: absolute;
+  top: 40%;
+}
+
+.sliderControl.prev {
+  left: -70px;
+}
+
+.sliderControl.next {
+  right: -70px;
+}
+
+.slide {
+  position: relative;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide button {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+}
+
 main .actionsList {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   column-gap: 40px;
 
+  margin-top: 48px;
   padding: 0;
+
   list-style: none;
 }
 
@@ -201,8 +234,6 @@ main .actionsList {
   padding: 16px 38px;
 
   font-size: 22px;
-  background: none;
-  border: none;
   text-decoration: underline;
 }
 
@@ -304,9 +335,7 @@ main .actionsList {
   height: 65px;
 
   font-size: 30px;
-  background: none;
   background-color: #7595cc;
-  border: none;
   border-radius: 8px;
 }
 
@@ -317,9 +346,6 @@ main .actionsList {
 
   width: 44px;
   height: 44px;
-
-  background: none;
-  border: none;
 
   font-size: 30px;
 }
