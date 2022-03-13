@@ -95,13 +95,32 @@ header .actions {
   display: flex;
 }
 
-header input[type="search"] {
+.searchForm {
+  position: relative;
+
+  margin-inline-end: 18px;
+}
+
+.searchInput {
   width: 295px;
   height: 48px;
+  padding-inline-start: 16px;
 
   background-color: #f9f9fb;
   border: #7595cc solid 1px;
   border-radius: 26px;
+  font-size: 22px;
+}
+
+.searchButton {
+  position: absolute;
+  right: 0;
+
+  width: 48px;
+  height: 48px;
+
+  background: none;
+  border: none;
 }
 
 .languages {
